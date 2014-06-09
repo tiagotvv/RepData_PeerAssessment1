@@ -1,8 +1,8 @@
 Reproducible Research - Peer Assignment 1
 ========================================================
-  ### Tiago T. V. Vinhoza
+### Tiago T. V. Vinhoza
   
-  ### May 18, 2014
+### June 9, 2014
   
   It is now possible to collect a large amount of data about personal movement using activity monitoring devices such as a Fitbit, Nike Fuelband, or Jawbone Up. These type of devices are part of the *quantified self movement* a group of enthusiasts who take measurements about themselves regularly to improve their health, to find patterns in their behavior, or because they are tech geeks. But these data remain under-utilized both because the raw data are hard to obtain and there is a lack of statistical methods and software for processing and interpreting the data.
 
@@ -93,7 +93,7 @@ hist(total_steps_per_day,breaks=10)
 
 ### Are there differences in activity patterns between weekdays and weekends?
 
-To answer this question we will create a new factor variable in the dataset with two levels: *weekday* and *weekend* indicating whether a given date is a weekday or weekend day. The following code creates the *day_of_week* column as logical, then convert it to a factor variable and rename the factor levels.
+To answer this question we create a new factor variable in the dataset with two levels: *weekday* and *weekend* indicating whether a given date is a weekday or weekend day. The following code creates the *day_of_week* column as logical, then convert it to a factor variable and rename the factor levels.
 ```{r}
 dataset2$day_of_week <- (weekdays(dataset$date)  == "Saturday" | weekdays(dataset$date)  == "Sunday")
 dataset2$day_of_week<-factor(dataset2$day_of_week)
